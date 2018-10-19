@@ -3,6 +3,7 @@
 dependencies: []
 
 galaxy_info:
+  role_name: rpcbind
   author: 'Adfinis SyGroup AG'
   description: 'Manage rpcbind service'
   company: 'Adfinis SyGroup AG'
