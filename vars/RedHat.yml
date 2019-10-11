@@ -5,4 +5,7 @@ rpcbind_packages:
   - rpcbind
 
 # rpcbind service name
-rpcbind_service: rpcbind
+rpcbind_service: rpcbind.service
+
+# rpcbind socket name
+rpcbind_socket: rpcbind.socket
