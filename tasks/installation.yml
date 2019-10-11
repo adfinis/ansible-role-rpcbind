@@ -1,5 +1,15 @@
 ---
 
+- name: disable and stop rpcbind service and socket if uninstalling rpcbind
+  service:
+    name: '{{ item }}'
+    state: stopped
+    enabled: no
+  with_items:
+    - '{{ rpcbind_service }}'
+    - '{{ rpcbind_socket }}'
+  when: rpcbind_package_state == 'absent'
+
 - name: handle rpcbind packages
   package:
     name: '{{ rpcbind_packages }}'
